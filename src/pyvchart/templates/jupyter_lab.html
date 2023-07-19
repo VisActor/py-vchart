@@ -1,5 +1,5 @@
-<div class="vis-arco-chart-wrap">
-    <div id="arco_{{ chart.chart_id }}" style="width: {{chart.width}}; height: {{chart.height}}">
+<div class="vis-actor-chart-wrap">
+    <div id="vis-actor-{{ chart.chart_id }}" style="width: {{chart.width}}; height: {{chart.height}}">
     </div>
     <script>
         // -> 这里代码请使用es5来写
@@ -55,13 +55,12 @@
 
         function render(data_source) {
             console.log('data_source', data_source);
-            let chart = new window.VChart.default("arco_{{chart.chart_id}}", data_source);
-            let teaColor = {{ chart.colors | safe
-        }}
-        chart.setColors(teaColor);
+            let chart = new window.VChart.default("vis-actor-{{chart.chart_id}}", data_source);
+            let defaultColor = {{ chart.colors | safe}}
+        chart.setColors(defaultColor);
         chart.renderAsync();
         // 移除.jp-RenderedHTMLCommon 对Table的样式, chart 的Tooltip是个Table
-        let target = document.querySelector("#arco_{{chart.chart_id}}").parentNode.parentNode;
+        let target = document.querySelector("#vis-actor-{{chart.chart_id}}").parentNode.parentNode;
         let classList = target.getAttribute("class");
         let ignoreList = ['rendered_html', 'jp-RenderedHTMLCommon'];
         let newClassList = classList;
@@ -88,7 +87,7 @@
         body > .jp-Notebook-cell.jp-mod-noInput > .jp-Cell-outputWrapper > .jp-Cell-outputArea,
         body > .jp-Notebook-cell.jp-mod-noInput > .jp-Cell-outputWrapper > .jp-Cell-outputArea > .jp-OutputArea-child,
         body > .jp-Notebook-cell.jp-mod-noInput > .jp-Cell-outputWrapper > .jp-Cell-outputArea > .jp-OutputArea-child > .jp-OutputArea-executeResult,
-        body > .jp-Notebook-cell.jp-mod-noInput > .jp-Cell-outputWrapper > .jp-Cell-outputArea > .jp-OutputArea-child > .jp-OutputArea-executeResult > .vis-arco-chart-wrap {
+        body > .jp-Notebook-cell.jp-mod-noInput > .jp-Cell-outputWrapper > .jp-Cell-outputArea > .jp-OutputArea-child > .jp-OutputArea-executeResult > .vis-actor-chart-wrap {
             height: 100%;
         }
         body {
