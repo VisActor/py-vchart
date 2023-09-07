@@ -1,5 +1,11 @@
 # py-vchart
 
+Install 
+```
+  pip3 install py-vchart==1.0.0
+```
+
+Usage
 ```python
 from pyvchart import render_chart
 # spec的定义参考 https://www.visactor.io/vchart/guide/getting-started 中的json
