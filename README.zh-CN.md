@@ -25,7 +25,10 @@
   pip3 install py-vchart==1.0.0
 ```
 
-### 使用
+### 📊 一个简单的图表
+
+<img src="https://user-images.githubusercontent.com/135952300/246996854-95cf0db3-42a2-41f9-8f15-8b7bbec1794c.png" style="width: 500px">
+
 ```python
 from pyvchart import render_chart
 # spec的定义参考 https://www.visactor.io/vchart/guide/getting-started 中的json
