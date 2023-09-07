@@ -4,57 +4,25 @@
 from pyvchart import render_chart
 # spec的定义参考 https://www.visactor.io/vchart/guide/getting-started 中的json
 spec = {
-    "type": "line",
-    "xField": "x",
-    "yField": "y",
-    "data": [
-        {
-            "name": "lineData",
-            "values": [
-                {
-                    "x": 0,
-                    "y": 28
-                },
-                {
-                    "x": 1,
-                    "y": 43
-                },
-                {
-                    "x": 2,
-                    "y": 81
-                },
-                {
-                    "x": 3,
-                    "y": 19
-                },
-                {
-                    "x": 4,
-                    "y": 52
-                },
-                {
-                    "x": 5,
-                    "y": 24
-                },
-                {
-                    "x": 6,
-                    "y": 87
-                },
-                {
-                    "x": 7,
-                    "y": 17
-                },
-                {
-                    "x": 8,
-                    "y": 17
-                },
-                {
-                    "x": 9,
-                    "y": 49
-                }
-            ]
-        }
-    ]
-}
+  "type": 'bar',
+  "data": [
+    {
+      "id": 'barData',
+      "values": [
+        { "month": 'Monday', "sales": 22 },
+        { "month": 'Tuesday', "sales": 13 },
+        { "month": 'Wednesday', "sales": 25 },
+        { "month": 'Thursday', "sales": 29 },
+        { "month": 'Friday', "sales": 38 }
+      ]
+    }
+  ],
+  "xField": 'month',
+  "yField": 'sales',
+  "crosshair": {
+    "xField": { "visible": True }
+  }
+};
 
 render_chart(spec)
 
