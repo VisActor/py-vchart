@@ -26,7 +26,10 @@ PyVchart is a Python package for the VChart chart library, which supports render
   pip3 install py-vchart==1.0.0
 ```
 
-### Usage
+### 📊 A Chart Example
+
+<img src="https://user-images.githubusercontent.com/135952300/246996854-95cf0db3-42a2-41f9-8f15-8b7bbec1794c.png" style="width: 500px">
+
 ```python
 from pyvchart import render_chart
 # spec's definition referenced in the JSON of https://www.visactor.io/vchart/guide/getting-started
