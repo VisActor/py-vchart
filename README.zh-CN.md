@@ -13,23 +13,22 @@
 
 <div align="center">
 
-English| [简体中文](./README.zh-CN.md)
+[English](./README.md) | 简体中文
 
 </div>
 
-## Doc
-PyVchart is a Python package for the VChart chart library, which supports rendering charts in both Notebook and Python environments.
+## 简介
+  PyVchart 是VChart图表库的python包，支持在Notebook和python环境中渲染图表
 
-
-### Install 
+### 安装
 ```
   pip3 install py-vchart==1.0.0
 ```
 
-### Usage
+### 使用
 ```python
 from pyvchart import render_chart
-# spec's definition referenced in the JSON of https://www.visactor.io/vchart/guide/getting-started
+# spec的定义参考 https://www.visactor.io/vchart/guide/getting-started 中的json
 spec = {
   "type": 'bar',
   "data": [
@@ -57,9 +56,9 @@ render_chart(spec)
 
 
 ```python
-# spec required
-spec is a JSON data in vchart format, as shown in the example above.
-# optional params
+# spec 必填参数
+spec 是一个vchart 格式的json数据，格式如上图示例
+# 可选参数
 width = '500px'
 height = '500px'
 colors = ['#EB6F02', '#76BEC8', '#D44977', '#EF85A7', '#675DAE', '#B6BC65', '#829E0B', '#A6A6E1'];
