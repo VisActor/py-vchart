@@ -1,0 +1,14 @@
+{
+    "JUPYTER_URL": "/nbextensions/china-cities-js",
+    "GITHUB_URL": "https://vchart-maps.github.io/china-cities-js",
+    "JUPYTER_ENTRY": "china-cities-js/index",
+    "JS_FOLDER": "js",
+    "GEOJSON_FOLDER": "geojson",
+    "PINYIN_MAP": {
+         "安庆": "an1_qing4"
+    },
+    "FILE_MAP": {
+        "an1_qing4": "shape-with-internal-borders/an1_hui1_an1_qing4",
+        "English Name": "shape-with-internal-borders/an1_hui1_an1_qing4"
+    }
+}

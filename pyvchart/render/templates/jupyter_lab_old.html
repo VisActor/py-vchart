@@ -4,7 +4,7 @@
     <script>
         // -> 这里代码请使用es5来写
         !function () {
-            let libSrc = "https://www.unpkg.com/@visactor/vchart/build/index.js"
+            let libSrc = "https://www.unpkg.com/@visactor/vchart/build/index"
             let libdom = document.body.getAttribute('class');
             // 判断是经典notebook 还是lib -> 同一个输出需要兼容lab
             // let isClassicNotebook = libdom.indexOf('notebook_app') !== -1;
@@ -43,7 +43,7 @@
 
                 loop();
             }
-            // 一段时间 check lib 是否已经加载成功, 
+            // 一段时间 check lib 是否已经加载成功,
             // 不监听onload 是避免有多个cell 的chart同时绘制
             function check() {
                 if (window.VChart && window.VChart.default) {
@@ -55,21 +55,21 @@
 
         function render(data_source) {
             console.log('data_source', data_source);
-            let chart = new window.VChart.default("vis-actor-{{chart.chart_id}}", data_source);
+            let chart = new window.VChart.default(data_source, {dom: "vis-actor-{{chart.chart_id}}"});
             let defaultColor = {{ chart.colors | safe}}
-        chart.setColors(defaultColor);
-        chart.renderAsync();
-        // 移除.jp-RenderedHTMLCommon 对Table的样式, chart 的Tooltip是个Table
-        let target = document.querySelector("#vis-actor-{{chart.chart_id}}").parentNode.parentNode;
-        let classList = target.getAttribute("class");
-        let ignoreList = ['rendered_html', 'jp-RenderedHTMLCommon'];
-        let newClassList = classList;
-        for (var i = 0; i < ignoreList.length; i++) {
-            newClassList = newClassList.replace(ignoreList[i], '');
-        }
-
-        target.setAttribute('class', newClassList);
+            chart.color = defaultColor;
+            chart.renderAsync();
+            // 移除.jp-RenderedHTMLCommon 对Table的样式, chart 的Tooltip是个Table
+            let target = document.querySelector("#vis-actor-{{chart.chart_id}}").parentNode.parentNode;
+            let classList = target.getAttribute("class");
+            let ignoreList = ['rendered_html', 'jp-RenderedHTMLCommon'];
+            let newClassList = classList;
+            for (var i = 0; i < ignoreList.length; i++) {
+                newClassList = newClassList.replace(ignoreList[i], '');
             }
+
+            target.setAttribute('class', newClassList);
+        }
 
         function loop() {
             setTimeout(function () {

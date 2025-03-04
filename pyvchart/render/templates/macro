@@ -1,0 +1,62 @@
+{%- macro render_chart_content(c) -%}
+    <div id="{{ c.chart_id }}" class="chart-container" style="width:{{ c.width }}; height:{{ c.height }}; {{ c.horizontal_center }}"></div>
+    <script>
+        {% for js in c.js_functions.items %}
+            {{ js }}
+        {% endfor %}
+        var option_{{ c.chart_id }} = {{ c.json_contents }};
+        const vchart_{{ c.chart_id }} = new VChart.default(option_{{ c.chart_id }}, {{ c.render_contents }});
+        vchart_{{ c.chart_id }}.renderSync();
+        {% if c.width.endswith('%') %}
+            window.addEventListener('resize', function(){
+                chart_{{ c.chart_id }}.resize();
+            })
+        {% endif %}
+        {% if c.js_events %}
+            {% for fn in c.js_events.items %}
+                {{ fn }}
+            {% endfor %}
+        {% endif %}
+    </script>
+{%- endmacro %}
+
+{%- macro render_notebook_charts(charts, libraries) -%}
+    <script>
+        require([{{ libraries | join(', ') }}], function(vchart) {
+        {% for c in charts %}
+            {% for js in c.js_functions.items %}
+                {{ js }}
+            {% endfor %}
+            var option_{{ c.chart_id }} = {{ c.json_contents }};
+            const vchart_{{ c.chart_id }} = new VChart.default(option_{{ c.chart_id }}, {dom: '{{ c.chart_id }}'});
+            vchart_{{ c.chart_id }}.renderSync();
+            {% if c.js_events %}
+                {% for fn in c.js_events.items %}
+                    {{ fn }}
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+        });
+    </script>
+{%- endmacro %}
+
+{%- macro render_chart_dependencies(c) -%}
+    {% if 'javascript' in c._render_cache -%}
+        {% set _javascript = c._render_cache.javascript %}
+        {% for dep in c.dependencies %}
+            <script type="text/javascript">
+                {{ _javascript.javascript_contents[dep] }}
+            </script>
+        {% endfor %}
+    {%- else -%}
+        {% for dep in c.dependencies %}
+            <script type="text/javascript" src="{{ dep }}"></script>
+        {% endfor %}
+    {%- endif %}
+{%- endmacro %}
+
+{%- macro render_chart_css(c) -%}
+    {% for dep in c.css_libs %}
+        <link rel="stylesheet" href="{{ dep }}">
+    {% endfor %}
+{%- endmacro %}

@@ -1,0 +1,4 @@
+include pyvchart/datasets/*.json
+include pyvchart/render/templates/*
+include README.md
+include README.en.md

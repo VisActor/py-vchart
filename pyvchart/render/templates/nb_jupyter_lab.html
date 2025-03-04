@@ -1,0 +1,12 @@
+{% import 'macro' as macro %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+{% for chart in charts %}
+    {{ macro.render_chart_content(chart) }}
+{% endfor %}
+</body>
+</html>
