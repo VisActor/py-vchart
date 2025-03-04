@@ -9,6 +9,7 @@ from setuptools import Command, find_packages, setup
 
 
 __title__ = "py-vchart"
+__folder_title__ = "pyvchart"
 __description__ = "python visualization sdk for @visactor/vchart"
 __url__ = "https://github.com/VisActor/py-vchart"
 __author_email__ = "shjkfld379978424@gmail.com"
@@ -24,7 +25,7 @@ __keywords__ = ["VChart", "charts", "plotting-tool"]
 # Load the package's _version.py module as a dictionary.
 here = os.path.abspath(os.path.dirname(__file__))
 about = {}
-with open(os.path.join(here, __title__, "_version.py")) as f:
+with open(os.path.join(here, __folder_title__, "_version.py")) as f:
     exec(f.read(), about)
 
 
