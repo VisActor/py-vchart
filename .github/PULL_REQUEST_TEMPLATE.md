@@ -1,14 +1,84 @@
 <!--
-
-### 提 PR 注意事项
-0. 同步到 dev 分支的最新版本
-1. 代码尽量保持与项目统一风格，尽量按照 PEP8 规范写代码，必要时附上注释
-2. 如需要时请添加单元测试，也请确保所有测试能够通过
-3. 将 PR 推送至远程的 dev 分支，main 分支只负责发布新版本。请在提交信息中描述关于该 PR 的详细信息，需要时加上截图。
-4. 若是对文档进行修改，请确保数字，字母与中文之间两边均有一空格，如你所看到的所有文档一样
-
+First of all, thank you for your contribution! 😄
+For requesting to pull a new feature or bugfix, please send it from a feature/bugfix branch based on the `main` branch.
+Before submitting your pull request, please make sure the checklist below is confirmed.
+Your pull requests will be merged after one of the collaborators approve.
+Thank you!
 -->
 
-本次 PR 内容，
+[[中文版模板 / Chinese template](https://github.com/VisActor/py-vchart/blob/main/.github/PULL_REQUEST_TEMPLATE/pr_cn.md?plain=1)]
 
+### 🤔 This is a ...
 
+- [ ] New feature
+- [ ] Bug fix
+- [ ] Performance optimization
+- [ ] Enhancement feature
+- [ ] Refactoring
+- [ ] Update dependency
+- [ ] Code style optimization
+- [ ] Test Case
+- [ ] Branch merge
+- [ ] Release
+- [ ] Site / documentation update
+- [ ] Demo update
+- [ ] Workflow
+- [ ] Other (about what?)
+
+### 🔗 Related issue link
+
+<!--
+1. Put the related issue or discussion links here.
+2. close #xxxx or fix #xxxx for instance.
+-->
+
+### 🔗 Related PR link
+
+<!-- Put the related PR links here. -->
+
+### 🐞 Bugserver case id
+
+<!-- paste the `fileid` field in the bugserver case url -->
+
+### 💡 Background and solution
+
+<!--
+1. Describe the problem and the scenario.
+2. GIF or snapshot should be provided if includes UI/interactive modification.
+3. How to fix the problem, and list the final API implementation and usage sample if that is a new feature.
+-->
+
+### 📝 Changelog
+
+<!--
+Describe changes from the user side, and list all potential break changes or other risks.
+--->
+
+| Language   | Changelog |
+| ---------- | --------- |
+| 🇺🇸 English |           |
+| 🇨🇳 Chinese |           |
+
+### ☑️ Self-Check before Merge
+
+⚠️ Please check all items below before requesting a reviewing. ⚠️
+
+- [ ] Doc is updated/provided or not needed
+- [ ] Demo is updated/provided or not needed
+- [ ] TypeScript definition is updated/provided or not needed
+- [ ] Changelog is provided or not needed
+
+---
+
+<!--
+Below are template for copilot to generate CR message.
+Please DO NOT modify it.
+-->
+
+### 🚀 Summary
+
+copilot:summary
+
+### 🔍 Walkthrough
+
+copilot:walkthrough

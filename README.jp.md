@@ -87,19 +87,26 @@ GitHub Actions を使用して継続的インテグレーション環境を構�
 pyvchart は以下の開発者が開発およびメンテナンスを行っています
 
 * [@sunhailin-Leo](https://github.com/sunhailin-Leo)
+* [@FunctionRun](https://github.com/FunctionRun)
 
 他の貢献者の情報は [pyvchart/graphs/contributors](https://github.com/pyvchart/pyvchart/graphs/contributors) で確認できます
 
-## 💡 貢献
+## 💡 コントリビューション [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/VisActor/py-vchart/blob/main/CONTRIBUTING.md#your-first-pull-request)
 
-より多くの開発者が pyvchart の開発に参加することを期待しています。PR のレビューを迅速に行い、タイムリーな返信を提供しますが、PR を送信する際には以下の点に注意してください
+コントリビュートを希望する場合は、[行動規範](./CODE_OF_CONDUCT.md) と [コントリビューションガイドライン](./CONTRIBUTING.ja-JP.md) をお読みください。
 
-1. すべてのユニットテストがパスし、新しい機能の場合はユニットテストを追加してください
-2. 開発ガイドラインに従い、コードを black および isort でフォーマットしてください（`$ pip install -r requirements-dev.txt` を実行してください）
-3. 必要に応じて関連ドキュメントを更新してください
+細流は大海となる！
 
-また、pyvchart に多くの例を提供してドキュメントを充実させることも歓迎します。ドキュメントプロジェクトは [pyvchart/website](https://github.com/pyvchart/website) にあります
+より多くの開発者が pyvchart の開発に参加することを楽しみにしています。PR は迅速にレビューされ、タイムリーな返信が行われます。ただし、PR を提出する際には以下の点にご注意ください：
+
+1. 全てのユニットテストがパスすること。新機能の場合、対応するユニットテストを追加してください。
+2. 開発ガイドラインに従い、black および isort を使用してコードをフォーマットしてください（`$ pip install -r requirements-dev.txt`）。
+3. 必要であれば、関連ドキュメントを更新してください。
+
+また、開発者の方々には、より多くのサンプルを提供し、ドキュメントの改善に協力していただくことを歓迎します。~~ドキュメントプロジェクトは [pyvchart/website](https://github.com/pyvchart/website) にあります~~ (ドキュメントは準備中...)
+
+<a href="https://github.com/visactor/py-vchart/graphs/contributors"><img src="https://contrib.rocks/image?repo=visactor/py-vchart" /></a>
 
 ## 📃 ライセンス
 
-MIT [©sunhailin-Leo](https://github.com/sunhailin-Leo)
+MIT [©VisActor](https://github.com/VisActor)

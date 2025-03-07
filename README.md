@@ -84,10 +84,15 @@ $ make
 pyvchart 主要由以下几位开发者开发维护
 
 * [@sunhailin-Leo](https://github.com/sunhailin-Leo)
+* [@FunctionRun](https://github.com/FunctionRun)
 
 更多贡献者信息可以访问 [pyvchart/graphs/contributors](https://github.com/pyvchart/pyvchart/graphs/contributors)
 
-## 💡 贡献
+## 💡 贡献 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/VisActor/py-vchart/blob/main/CONTRIBUTING.md#your-first-pull-request)
+
+如想参与贡献，请先阅读[行为准则](./CODE_OF_CONDUCT.md) 和[贡献指南](./CONTRIBUTING.zh-CN.md)。
+
+细流成河，终成大海！
 
 期待能有更多的开发者参与到 pyvchart 的开发中来，我们会保证尽快 Reivew PR 并且及时回复。但提交 PR 请确保
 
@@ -95,8 +100,10 @@ pyvchart 主要由以下几位开发者开发维护
 2. 遵守开发规范，使用 black 以及 isort 格式化代码（$ pip install -r requirements-dev.txt）
 3. 如若需要，请更新相对应的文档
 
-我们也非常欢迎开发者能为 pyvchart 提供更多的示例，共同来完善文档，文档项目位于 [pyvchart/website](https://github.com/pyvchart/website)
+我们也非常欢迎开发者能为 pyvchart 提供更多的示例，共同来完善文档，~~文档项目位于 [pyvchart/website](https://github.com/pyvchart/website)~~ (文档在准备中...)
+
+<a href="https://github.com/visactor/py-vchart/graphs/contributors"><img src="https://contrib.rocks/image?repo=visactor/py-vchart" /></a>
 
 ## 📃 License
 
-MIT [©sunhailin-Leo](https://github.com/sunhailin-Leo)
+MIT [©VisActor](https://github.com/VisActor)

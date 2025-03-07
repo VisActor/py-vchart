@@ -87,19 +87,26 @@ Using [flake8](http://flake8.pycqa.org/en/latest/index.html), [Codecov](https://
 pyvchart is mainly developed and maintained by the following developers
 
 * [@sunhailin-Leo](https://github.com/sunhailin-Leo)
+* [@FunctionRun](https://github.com/FunctionRun)
 
 More contributor information can be found at [pyvchart/graphs/contributors](https://github.com/pyvchart/pyvchart/graphs/contributors)
 
-## 💡 Contribution
+## 💡 Contribution [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/VisActor/py-vchart/blob/main/CONTRIBUTING.md#your-first-pull-request)
 
-We look forward to more developers participating in the development of pyvchart. We will ensure timely review of PRs and prompt responses. However, when submitting a PR, please ensure:
+If you wish to contribute, please read the [Code of Conduct](./CODE_OF_CONDUCT.md) and [Contribution Guidelines](./CONTRIBUTING.md).
 
-1. All unit tests pass, and add unit tests for new features if necessary
-2. Adhere to the development guidelines, format the code using black and isort (run `$ pip install -r requirements-dev.txt`)
-3. Update relevant documentation if necessary
+A small stream can become a vast ocean!
 
-We also welcome developers to provide more examples for pyvchart to help improve the documentation. The documentation project is located at [pyvchart/website](https://github.com/pyvchart/website)
+We look forward to more developers joining the development of pyvchart. We will ensure that PRs are reviewed promptly and replies are timely. However, when submitting a PR, please ensure:
+
+1. All unit tests pass. If it's a new feature, please add corresponding unit tests.
+2. Follow the development guidelines and format the code using black and isort (`$ pip install -r requirements-dev.txt`).
+3. Update relevant documentation if necessary.
+
+We also warmly welcome developers to provide more examples and help improve the documentation. ~~The documentation project is located at [pyvchart/website](https://github.com/pyvchart/website)~~ (Documentation is in preparation...)
+
+<a href="https://github.com/visactor/py-vchart/graphs/contributors"><img src="https://contrib.rocks/image?repo=visactor/py-vchart" /></a>
 
 ## 📃 License
 
-MIT [©sunhailin-Leo](https://github.com/sunhailin-Leo)
+MIT [©VisActor](https://github.com/VisActor)
