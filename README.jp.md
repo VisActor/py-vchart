@@ -26,7 +26,7 @@
 
 ## 📣 はじめに
 
-[VisActor/VChart](https://github.com/VisActor/VChart) は、字節ジャンプトがオープンソース化したビジュアル化ソリューション VisActor のコアチャートコンポーネントライブラリです。これはビジュアル化文法ライブラリ VGrammar とレンダリングエンジン VRender を基に構築されており、データの表示だけでなく、ナレーシナリオ向けのアニメーション編成、豊富なインタラクティブ機能、カスタマイズ可能なチャートスタイルもサポートしています。シンプルで使いやすい設定により、ユーザーの学習コストが大幅に削減されます。一方、Python は表現力豊かな言語であり、データ処理やAIなどの分野で非常に適しています。データ分析やモデリングがデータビジュアライゼーションと組み合わさったときに、[pyecharts](https://github.com/pyecharts/pyecharts) と [pyvchart](https://github.com/pyvchart/pyvchart) が生まれました。
+[VisActor/VChart](https://github.com/VisActor/VChart) は、字節ジャンプトがオープンソース化したビジュアル化ソリューション VisActor のコアチャートコンポーネントライブラリです。これはビジュアル化文法ライブラリ VGrammar とレンダリングエンジン VRender を基に構築されており、データの表示だけでなく、ナレーシナリオ向けのアニメーション編成、豊富なインタラクティブ機能、カスタマイズ可能なチャートスタイルもサポートしています。シンプルで使いやすい設定により、ユーザーの学習コストが大幅に削減されます。一方、Python は表現力豊かな言語であり、データ処理やAIなどの分野で非常に適しています。データ分析やモデリングがデータビジュアライゼーションと組み合わさったときに、[pyecharts](https://github.com/pyecharts/pyecharts) と [py-vchart](https://github.com/VisActor/py-vchart) が生まれました。
 
 ## ✨ 特徴
 
@@ -42,19 +42,15 @@
 **pip インストール**
 ```shell
 # インストール
-# 【❕注意❕】現在、PyPI に長期間メンテナンスされていない同名のプロジェクトが存在するため、wheel を PyPI にアップロードすることができません。
-$ pip install pyvchart -U
-
-# 一時的な解決策
-$ pip install git+https://github.com/pyvchart/pyvchart@v0.1.0
+$ pip install py-vchart -U
 ```
 
 
 **ソースコードインストール**
 ```shell
-# バージョン v1 以上をインストール
-$ git clone https://github.com/pyvchart/pyvchart.git
-$ cd pyvchart
+# バージョン
+$ git clone https://github.com/VisActor/py-vchart.git
+$ cd py-vchart
 $ pip install -r requirements.txt
 $ python setup.py install
 ```

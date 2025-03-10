@@ -26,7 +26,7 @@
 
 ## 📣 Introduction
 
-[VisActor/VChart](https://github.com/VisActor/VChart) is a core chart component library of the open-source visualization solution VisActor by ByteDance. It is based on the visualization grammar library VGrammar and the rendering engine VRender, providing not only data presentation but also support for animation orchestration for narrative scenarios, rich interaction capabilities, and customizable chart styles. The simple and easy-to-use configuration greatly reduces the learning cost for users. Python, with its expressive syntax, is well-suited for data processing and AI scenarios. When data analysis and modeling meet data visualization, [pyecharts](https://github.com/pyecharts/pyecharts) and [pyvchart](https://github.com/pyvchart/pyvchart) were born.
+[VisActor/VChart](https://github.com/VisActor/VChart) is a core chart component library of the open-source visualization solution VisActor by ByteDance. It is based on the visualization grammar library VGrammar and the rendering engine VRender, providing not only data presentation but also support for animation orchestration for narrative scenarios, rich interaction capabilities, and customizable chart styles. The simple and easy-to-use configuration greatly reduces the learning cost for users. Python, with its expressive syntax, is well-suited for data processing and AI scenarios. When data analysis and modeling meet data visualization, [pyecharts](https://github.com/pyecharts/pyecharts) and [py-vchart](https://github.com/VisActor/py-vchart) were born.
 
 ## ✨ Features
 
@@ -42,19 +42,15 @@
 **pip installation**
 ```shell
 # Install
-# 【❕Note❕】Currently, it cannot be used because there is an old, unmaintained project with a similar name on PyPI, and it is temporarily unable to upload the wheel to PyPI.
-$ pip install pyvchart -U
-
-# Temporary Solution
-$ pip install git+https://github.com/pyvchart/pyvchart@v0.1.0
+$ pip install py-vchart -U
 ```
 
 
 **Source code installation**
 ```shell
-# Install version v1 and above
-$ git clone https://github.com/pyvchart/pyvchart.git
-$ cd pyvchart
+# Install
+$ git clone https://github.com/VisActor/py-vchart.git
+$ cd py-vchart
 $ pip install -r requirements.txt
 $ python setup.py install
 ```

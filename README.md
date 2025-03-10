@@ -26,7 +26,7 @@
 
 ## 📣 简介
 
-[VisActor/VChart](https://github.com/VisActor/VChart) 是一个由字节跳动开源可视化解决方案 VisActor 的核心图表组件库。它基于它基于可视化语法库 VGrammar 和渲染引擎 VRender 进行封装，在满足数据呈现的同时，还支持面向叙事场景的动画编排、丰富的交互能力和定制化的图表风格，简单易用的配置大大降低了用户的学习成本。而 Python 是一门富有表达力的语言，非常适合用于数据处理、AI 等场景。当数据分析，建模遇上数据可视化时，[pyecharts](https://github.com/pyecharts/pyecharts) 和 [pyvchart](https://github.com/pyvchart/pyvchart) 诞生了。
+[VisActor/VChart](https://github.com/VisActor/VChart) 是一个由字节跳动开源可视化解决方案 VisActor 的核心图表组件库。它基于它基于可视化语法库 VGrammar 和渲染引擎 VRender 进行封装，在满足数据呈现的同时，还支持面向叙事场景的动画编排、丰富的交互能力和定制化的图表风格，简单易用的配置大大降低了用户的学习成本。而 Python 是一门富有表达力的语言，非常适合用于数据处理、AI 等场景。当数据分析，建模遇上数据可视化时，[pyecharts](https://github.com/pyecharts/pyecharts) 和 [py-vchart](https://github.com/VisActor/py-vchart) 诞生了。
 
 ## ✨ 特性
 
@@ -42,18 +42,15 @@
 **pip 安装**
 ```shell
 # 安装
-# 目前暂时用不了，因为 PyPI 中存在一个较长时间没有维护且类似名字的项目，暂时无法上传 wheel 到 PyPI 中。
-$ pip install pyvchart -U
+$ pip install py-vchart -U
 
-# 暂时解决方案
-pip install git+https://github.com/pyvchart/pyvchart@v0.1.0
 ```
 
 **源码安装**
 ```shell
-# 安装 v1 以上版本
-$ git clone https://github.com/pyvchart/pyvchart.git
-$ cd pyvchart
+# 源码安装
+$ git clone https://github.com/VisActor/py-vchart.git
+$ cd py-vchart
 $ pip install -r requirements.txt
 $ python setup.py install
 ```
