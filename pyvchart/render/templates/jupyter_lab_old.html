@@ -1,0 +1,118 @@
+<div class="vis-actor-chart-wrap">
+    <div id="vis-actor-{{ chart.chart_id }}" style="width: {{chart.width}}; height: {{chart.height}}">
+    </div>
+    <script>
+        // -> 这里代码请使用es5来写
+        !function () {
+            let libSrc = "https://www.unpkg.com/@visactor/vchart/build/index"
+            let libdom = document.body.getAttribute('class');
+            // 判断是经典notebook 还是lib -> 同一个输出需要兼容lab
+            // let isClassicNotebook = libdom.indexOf('notebook_app') !== -1;
+            let isAmd = ("function" == typeof define && define.amd);
+            // 经典notebook 使用require 来加载, 导致页面的模块加载方式改变, 因为修改了exports, 导致vchart无法挂到window上
+            console.log('isAmd', isAmd);
+            if (isAmd && window.requirejs && window.require) {
+                if (document.body.getAttribute('vchart_loaded') !== 'true') {
+                    // 只需要配置一次
+                    window.requirejs.config({
+                        enforceDefine: true,
+                        paths: {
+                            "VChart": libSrc
+                        },
+                        waitSeconds: 40
+                    });
+                    document.body.setAttribute('vchart_loaded', 'true');
+                }
+
+                window.require(['VChart'], function (VChart) {
+                    window.VChart = VChart;
+                    check();
+                })
+            } else if (!isAmd) {
+                // 动态创建一个js , 避免浏览器兼容apipyechart
+                let libDom = document.querySelector('#vchart');
+                // 全局唯一 lib, 之前有就不再加载
+                if (!libDom) {
+                    let lib = document.createElement("script");
+                    lib.type = "text/javascript";
+                    lib.src = libSrc + ".js";
+                    lib.id = 'vchart';
+                    lib.async = true;
+                    document.head.append(lib);
+                }
+
+                loop();
+            }
+            // 一段时间 check lib 是否已经加载成功,
+            // 不监听onload 是避免有多个cell 的chart同时绘制
+            function check() {
+                if (window.VChart && window.VChart.default) {
+                    render(JSON.parse({{ chart.data_source | tojson }}))
+            } else {
+                loop()
+            }
+        }
+
+        function render(data_source) {
+            console.log('data_source', data_source);
+            let chart = new window.VChart.default(data_source, {dom: "vis-actor-{{chart.chart_id}}"});
+            let defaultColor = {{ chart.colors | safe}}
+            chart.color = defaultColor;
+            chart.renderAsync();
+            // 移除.jp-RenderedHTMLCommon 对Table的样式, chart 的Tooltip是个Table
+            let target = document.querySelector("#vis-actor-{{chart.chart_id}}").parentNode.parentNode;
+            let classList = target.getAttribute("class");
+            let ignoreList = ['rendered_html', 'jp-RenderedHTMLCommon'];
+            let newClassList = classList;
+            for (var i = 0; i < ignoreList.length; i++) {
+                newClassList = newClassList.replace(ignoreList[i], '');
+            }
+
+            target.setAttribute('class', newClassList);
+        }
+
+        function loop() {
+            setTimeout(function () {
+                check()
+            }, 500);
+        }
+        }();
+    </script>
+    <style>
+        /*********For Lab Template*********/
+        /* html,
+        body,
+        body > .jp-Notebook-cell.jp-mod-noInput,
+        body > .jp-Notebook-cell.jp-mod-noInput > .jp-Cell-outputWrapper,
+        body > .jp-Notebook-cell.jp-mod-noInput > .jp-Cell-outputWrapper > .jp-Cell-outputArea,
+        body > .jp-Notebook-cell.jp-mod-noInput > .jp-Cell-outputWrapper > .jp-Cell-outputArea > .jp-OutputArea-child,
+        body > .jp-Notebook-cell.jp-mod-noInput > .jp-Cell-outputWrapper > .jp-Cell-outputArea > .jp-OutputArea-child > .jp-OutputArea-executeResult,
+        body > .jp-Notebook-cell.jp-mod-noInput > .jp-Cell-outputWrapper > .jp-Cell-outputArea > .jp-OutputArea-child > .jp-OutputArea-executeResult > .vis-actor-chart-wrap {
+            height: 100%;
+        }
+        body {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        body > .jp-Notebook-cell.jp-mod-noInput {
+            padding: 0 !important;
+        } */
+
+        /*********For Classic Template*********/
+        /* html,
+        body,
+        div#notebook,
+        div#notebook>.container,
+        div#notebook>.container>.cell,
+        div#notebook>.container>.cell>.output_wrapper,
+        div#notebook>.container>.cell>.output_wrapper>.output,
+        div#notebook>.container>.cell>.output_wrapper>.output>.output_area,
+        div#notebook>.container>.cell>.output_wrapper>.output>.output_area>.output_html,
+        div#notebook>.container>.cell>.output_wrapper>.output>.output_area>.output_html>div {
+            height: 100%;
+        }
+        div#notebook-container {
+            box-sizing: border-box;
+        } */
+    </style>
+</div>

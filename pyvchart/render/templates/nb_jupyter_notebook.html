@@ -1,0 +1,15 @@
+{% import 'macro' as macro %}
+
+<script>
+    require.config({
+        paths: {
+            {{ config_items | join(', ') }}
+        }
+    });
+</script>
+
+{% for chart in charts %}
+    <div id="{{ chart.chart_id }}" style="width:{{ chart.width }}; height:{{ chart.height }};"></div>
+{% endfor %}
+
+{{ macro.render_notebook_charts(charts, libraries) }}
