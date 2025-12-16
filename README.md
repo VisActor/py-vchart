@@ -101,6 +101,17 @@ pyvchart 主要由以下几位开发者开发维护
 
 <a href="https://github.com/visactor/py-vchart/graphs/contributors"><img src="https://contrib.rocks/image?repo=visactor/py-vchart" /></a>
 
+## Star History
+
+<a href="https://gitdata.xuanhun520.com/#VisActor/py-vchart&Date">
+<picture >
+  <source media="(prefers-color-scheme: dark) and (max-width: 800px)" srcset="https://gitdata.xuanhun520.com/api/starimg?repos=VisActor/py-vchart&type=Date&theme=dark" />
+  <source  media="(prefers-color-scheme: light) and (max-width: 800px)" srcset="https://gitdata.xuanhun520.com/api/starimg?repos=VisActor/py-vchart&type=Date&theme=light" />
+  <img style="width: 800px; height: 533px;" alt="Star History Chart" src="https://gitdata.xuanhun520.com/api/starimg?repos=VisActor/py-vchart&type=Date&theme=dark" />
+</picture>
+</a>
+
+
 ## 📃 License
 
 MIT [©VisActor](https://github.com/VisActor)
